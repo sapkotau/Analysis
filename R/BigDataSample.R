@@ -12,6 +12,6 @@ for(l in list.files('usr/hdp/current/hive-client/lib/')){
 }
 options( java.parameters = "-Xmx8g" )
 drv <- JDBC("org.apache.hive.jdbc.HiveDriver", "/usr/hdp/current/hive-client/lib/hive-jdbc.jar")
-conn <- dbConnect(drv, "jdbc:hive2://localhost:10000/default", "usapkota", "Pokhara11235$")
+conn <- dbConnect(drv, "jdbc:hive2://localhost:10000/default", "usapkota", "")
 
 show_databases <- dbGetQuery(conn, "show databases")
